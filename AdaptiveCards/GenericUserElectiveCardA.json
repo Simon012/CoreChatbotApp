@@ -1,0 +1,37 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Hi ${name},",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "this is a generic UserElecive's first Adaptive Card. Use the following inputs to provide data points to the chatbot.",
+      "wrap": true
+    },
+    {
+      "type": "Input.Number",
+      "placeholder": "Placeholder text",
+      "label": "Input a number between 2 and 50:",
+      "min": 2,
+      "max": 50,
+      "isRequired": true,
+      "id": "input",
+      "errorMessage": "You can't submit this card without entering a valid number!"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Next",
+          "id": "submit"
+        }
+      ]
+    }
+  ]
+}
